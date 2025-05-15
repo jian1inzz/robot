@@ -38,6 +38,10 @@ install(
     my_robot/camera.py
     my_robot/yolorun.py
     my_robot/rplidar.py
+    my_robot/obstacle1.py
+    my_robot/yolorun2.py
+    my_robot/partrol3.py
+    my_robot/decision4.py
   
   DESTINATION lib/${PROJECT_NAME}
 )

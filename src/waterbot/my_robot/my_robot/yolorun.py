@@ -21,9 +21,9 @@ class YoloCmdListener(Node):
         self.angle_deg    = None     # 連續角度 (deg)
         self.front_dist   = float('inf')
 
-        self.create_subscription(String,  '/yolo_cmd',   self.cb_cmd,   10)
-        self.create_subscription(Float32, '/yolo_angle', self.cb_angle, 10)
-        self.create_subscription(LaserScan, '/scan',     self.cb_scan,  10)
+        self.create_subscription(String,  '/yolo_cmd',            self.cb_cmd,   10)
+        self.create_subscription(Float32, '/yolo_angle',          self.cb_angle, 10)
+        self.create_subscription(LaserScan, '/filtered_scan',     self.cb_scan,  10)
         self.pub_vel = self.create_publisher(Twist, '/cmd_vel', 10)
 
         self.create_timer(0.1, self.control_loop)
